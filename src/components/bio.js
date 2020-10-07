@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Image from "gatsby-image"
 
 const Bio = () => {
@@ -48,7 +48,7 @@ const Bio = () => {
       )}
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
+          Written by <Link to="/about"><strong>{author.name}</strong></Link> {author?.summary || null}
           
         </p>
       )}
